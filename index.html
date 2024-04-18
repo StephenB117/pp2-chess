@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Chess Game</title>
+    <title>Chess Puzzle Run</title>
 </head>
 <body>
-    
+    <header> Chess Puzzle Run </header>
+    <main>
+        <div>
+            <h2>Solve as many consecutive puzzles as possible by entering the correct next move!</h2>
+        </div>
+        <div id="chess-image"></div>
+        <div id="move-input">
+            <p>Best move:</p>
+            <label for="from">From</label>
+            <input id="from" type="text">
+            <label for="to">To</label>
+            <input id="to" type="text">
+            <input id="submit-answer" type="submit">
+        </div>
+        <div id="score">
+            <p>Score: <span id="current-score">0</span></p>
+        </div>
+        <div id="leaderboard">
+            <h3>Leaderboard</h3>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Score</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>place holder</td>
+                        <td>place holder</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>    
     <script src="assets/js/script.js"></script>
 </body>
 </html>

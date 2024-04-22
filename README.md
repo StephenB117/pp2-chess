@@ -61,6 +61,8 @@ B2P6 solution: C4 G8
 ## Credits:
 
 ### Content 
+Code to increase the score by one point taken from love maths project. 
+
 
 ### Media
 Chess puzzle images and solutions taken from [ChessPuzzle.net](https://chesspuzzle.net/) 

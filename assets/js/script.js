@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", generatePuzzle)
-document.getElementById("submit-answer").addEventListener("click", checkAnswer);
+document.addEventListener("DOMContentLoaded", function (){
+    generatePuzzle();
+    checkColorToPlay();
+})
+document.getElementById("submit-answer").addEventListener("click", checkColorToPlay);
 
 /**
  * Generates the puzzle for the user. 
@@ -51,6 +54,14 @@ function resetGame() {
 /**
  * Checks which side is to play white or black.
  */
-function checkPlayerTurn () {
+function checkColorToPlay () {
+    let colorToPlay = document.getElementById("color-to-move");
+    let puzzleLink = document.getElementById("chess-image").innerHTML.charAt(24);
 
+    if (puzzleLink === "W") {
+        colorToPlay.innerText = "White";
+    }
+    else {
+        colorToPlay.innerText = "Black";
+    };
 }

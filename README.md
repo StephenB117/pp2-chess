@@ -30,6 +30,32 @@ If the user has a score of 0 they will not be added to the leaderboard.
 
 ## Testing:
 
+### Solutions 
+W2P1 solution: F3 F8
+
+W2P2 solution: D5 D6
+
+W2P3 solution: E5 D6
+
+W2P4 solution: F4 G5
+
+W2P5 solution: E4 E5
+
+W2P6 solution: H8 F6
+
+B2P1 solution: B5 B3
+
+B2P2 solution: B3 C3
+
+B2P3 solution: F5 F4
+
+B2P4 solution: F6 E5
+
+B2P5 solution: C8 C4
+
+B2P6 solution: C4 G8
+
+
 ## Deployment:
 
 ## Credits:

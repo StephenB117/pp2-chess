@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", generatePuzzle);
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
+document.getElementById("from").toUpperCase();
 
 /**
  * Generates the puzzle for the user. 
@@ -17,8 +18,8 @@ function generatePuzzle() {
  * Checks answer against the image shown.
  */
 function checkAnswer() {
-    let from = document.getElementById("from").value;
-    let to = document.getElementById("to").value;
+    let from = document.getElementById("from").value.toUpperCase();
+    let to = document.getElementById("to").value.toUpperCase();
     let currentPuzzle = document.getElementById("chess-image").innerHTML;
 
     if (currentPuzzle === '<img src="assets/images/B2P1.JPG" alt="Chess puzzle">') {
@@ -167,7 +168,6 @@ function updateLeaderboard() {
  * Resets players score to 0
  */
 function resetGame() {
-    let Score = document.getElementById("current-score").innerText;
     document.getElementById("current-score").innerText = 0;  
     
 }

@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", generatePuzzle);
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
-document.getElementById("from").toUpperCase();
 
 /**
  * Generates the puzzle for the user. 
@@ -164,15 +163,31 @@ function incrementScore() {
  * Adds players name and score to the leaderboard.
  */
 function updateLeaderboard() {
-    
+    let username = prompt("Please enter a username");
+    let score = document.getElementById("current-score").innerText;
+    let newRow = document.createElement("tr");
+    let userCell = document.createElement("td");
+    let scoreCell = document.createElement("td");
+    let tableBody = document.getElementById("player-scores");
+
+    userCell.innerText = username;
+    scoreCell.innerText = score;
+    newRow.appendChild(userCell);
+    newRow.appendChild(scoreCell);
+    tableBody.appendChild(newRow);
 }
 
 /**
  * Resets players score to 0
  */
 function resetGame() {
+    let score = document.getElementById("current-score").innerText;
+
+    if (score > 0) {
+        updateLeaderboard();
+    }
+
     document.getElementById("current-score").innerText = 0;  
-    
     
 }
 

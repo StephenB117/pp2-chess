@@ -11,7 +11,10 @@ function generatePuzzle() {
     let imageDiv = document.getElementById("chess-image");
 
     imageDiv.innerHTML = `<img src="assets/images/${puzzles[randomNum]}" alt="Chess puzzle">`;
+    document.getElementById("from").value = " ";
+    document.getElementById("to").value = " ";
     checkColorToPlay();
+    
 }
 
 /**
@@ -169,6 +172,7 @@ function updateLeaderboard() {
  */
 function resetGame() {
     document.getElementById("current-score").innerText = 0;  
+    
     
 }
 

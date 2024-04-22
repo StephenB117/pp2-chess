@@ -26,10 +26,18 @@ function checkAnswer() {
             incrementScore();
             generatePuzzle();
         }
+        else {
+            resetGame();
+            generatePuzzle();
+        }
     } 
     else if (currentPuzzle === '<img src="assets/images/B2P2.JPG" alt="Chess puzzle">') {
         if (from === "B3" && to === "C3") {
             incrementScore();
+            generatePuzzle();
+        }
+        else {
+            resetGame();
             generatePuzzle();
         }
     }
@@ -37,11 +45,19 @@ function checkAnswer() {
         if (from === "F4" && to === "F5") {
             incrementScore();
             generatePuzzle();
-        }    
+        } 
+        else {
+            resetGame();
+            generatePuzzle();
+        }   
     }
     else if (currentPuzzle === '<img src="assets/images/B2P4.JPG" alt="Chess puzzle">') {
         if (from === "F6" && to === "E5") {
             incrementScore();
+            generatePuzzle();
+        }
+        else {
+            resetGame();
             generatePuzzle();
         }
     }
@@ -50,10 +66,18 @@ function checkAnswer() {
             incrementScore();
             generatePuzzle();
         }
+        else {
+            resetGame();
+            generatePuzzle();
+        }
     }
     else if (currentPuzzle === '<img src="assets/images/B2P6.JPG" alt="Chess puzzle">') {
         if (from === "C4" && to === "G8") {
             incrementScore();
+            generatePuzzle();
+        }
+        else {
+            resetGame();
             generatePuzzle();
         }
     }
@@ -62,10 +86,18 @@ function checkAnswer() {
             incrementScore();
             generatePuzzle();
         }
+        else {
+            resetGame();
+            generatePuzzle();
+        }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P2.JPG" alt="Chess puzzle">') {
         if (from === "D5" && to === "D6") {
             incrementScore();
+            generatePuzzle();
+        }
+        else {
+            resetGame();
             generatePuzzle();
         }
     }
@@ -74,10 +106,18 @@ function checkAnswer() {
             incrementScore();
             generatePuzzle();
         }
+        else {
+            resetGame();
+            generatePuzzle();
+        }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P4.JPG" alt="Chess puzzle">') {
         if (from === "F4" && to === "G5") {
             incrementScore();
+            generatePuzzle();
+        }
+        else {
+            resetGame();
             generatePuzzle();
         }
     }
@@ -86,17 +126,23 @@ function checkAnswer() {
             incrementScore();
             generatePuzzle();
         }
+        else {
+            resetGame();
+            generatePuzzle();
+        }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P6.JPG" alt="Chess puzzle">') {
         if (from === "H8" && to === "F6") {
             incrementScore();
             generatePuzzle();
         }
+        else {
+            resetGame();
+            generatePuzzle();
+        }
     }
     else {
-        resetGame();
-        generatePuzzle();
-        alert("else is triggering");
+        alert("Something went wrong");
     }
 }
 

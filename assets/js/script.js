@@ -1,8 +1,5 @@
-document.addEventListener("DOMContentLoaded", function (){
-    generatePuzzle();
-    checkColorToPlay();
-})
-document.getElementById("submit-answer").addEventListener("click", checkColorToPlay);
+document.addEventListener("DOMContentLoaded", generatePuzzle);
+document.getElementById("submit-answer").addEventListener("click", checkAnswer);
 
 /**
  * Generates the puzzle for the user. 
@@ -12,17 +9,95 @@ function generatePuzzle() {
     let randomNum = Math.floor(Math.random() * 12);
     let imageDiv = document.getElementById("chess-image");
 
-    imageDiv.innerHTML = `<img src="assets/images/${puzzles[randomNum]}" alt="Chess puzzle"/>`;
+    imageDiv.innerHTML = `<img src="assets/images/${puzzles[randomNum]}" alt="Chess puzzle">`;
+    checkColorToPlay();
 }
 
 /**
  * Checks answer against the image shown.
  */
 function checkAnswer() {
-    let from = document.getElementById("from").innerText;
-    let to = document.getElementById("to").innerText;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
     let currentPuzzle = document.getElementById("chess-image").innerHTML;
-    console.log(currentPuzzle);
+
+    if (currentPuzzle === '<img src="assets/images/B2P1.JPG" alt="Chess puzzle">') {
+        if (from === "B5" && to === "B3") {
+            incrementScore();
+            generatePuzzle();
+        }
+    } 
+    else if (currentPuzzle === '<img src="assets/images/B2P2.JPG" alt="Chess puzzle">') {
+        if (from === "B3" && to === "C3") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/B2P3.JPG" alt="Chess puzzle">') {
+        if (from === "F4" && to === "F5") {
+            incrementScore();
+            generatePuzzle();
+        }    
+    }
+    else if (currentPuzzle === '<img src="assets/images/B2P4.JPG" alt="Chess puzzle">') {
+        if (from === "F6" && to === "E5") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/B2P5.JPG" alt="Chess puzzle">') {
+        if (from === "C8" && to === "C4") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/B2P6.JPG" alt="Chess puzzle">') {
+        if (from === "C4" && to === "G8") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/W2P1.JPG" alt="Chess puzzle">') {
+        if (from === "F3" && to === "F8") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/W2P2.JPG" alt="Chess puzzle">') {
+        if (from === "D5" && to === "D6") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/W2P3.JPG" alt="Chess puzzle">') {
+        if (from === "E5" && to === "D6") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/W2P4.JPG" alt="Chess puzzle">') {
+        if (from === "F4" && to === "G5") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/W2P5.JPG" alt="Chess puzzle">') {
+        if (from === "E4" && to === "E5") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else if (currentPuzzle === '<img src="assets/images/W2P6.JPG" alt="Chess puzzle">') {
+        if (from === "H8" && to === "F6") {
+            incrementScore();
+            generatePuzzle();
+        }
+    }
+    else {
+        resetGame();
+        generatePuzzle();
+        alert("else is triggering");
+    }
 }
 
 /**

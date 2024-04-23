@@ -10,9 +10,9 @@
 <body>
     <header> Chess Puzzle Run </header>
     <main>
-        <div>
+        <div class="instructions">
             <h2>Solve as many consecutive puzzles as possible by entering the correct next move!</h2>
-            <h3>Use standard chess notation in the from and to boxes when answering, e.g From: B3 To: C4 </h3>
+            <h3>Use the following notation in the answer box when submitting the answer square to move from, square to move to. e.g B3C4 </h3>
         </div>
         <div class="side-to-move">
             <p><span id="color-to-move"></span> to move </p>
@@ -20,10 +20,8 @@
         <div id="chess-image"></div>
         <div class="move-input">
             <p>Best move:</p>
-            <label for="from">From</label>
-            <input id="from" type="text">
-            <label for="to">To</label>
-            <input id="to" type="text">
+            <label for="answer">From</label>
+            <input id="answer" type="text">
             <input id="submit-answer" type="submit">
         </div>
         <div class="score">

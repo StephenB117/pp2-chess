@@ -9,14 +9,14 @@ A random puzzle image is generated for the user to work out the best move.
 When the user enters the correct move the score is increased by 1 and a new image is generated. The game stops when the user enters an incorrect move.  
 
 ### Leaderboard:
-When the game ends the user is given a prompt to enter a username which adds their chosen name and score to the leaderboard. 
+When the game ends the user is given a prompt to enter a username which adds their chosen name and score to the leaderboard. Unless the user has not scored above 0.
 
 ## My Logic: 
 On the site loading an image is randomly selected from the assets.
 
 Depending on the image the user will be told either white or black to play. 
 
-The user will enter their answer into two answer boxes. "From" being the piece "To" move to being the square to take. 
+The user will enter their answer into the answer box following the instructions given. 
 
 Once the user submits their answer the answer is checked against the image. 
 
@@ -57,6 +57,17 @@ B2P6 solution: C4 G8
 
 
 ## Deployment:
+Site deployed to GitHub Pages. 
+
+To deploy the site I went to the repository. 
+
+Selected settings and went to pages. 
+
+I then set the branch to main and saved. 
+
+I then went to actions and clicked on pages build and deployment and got the link to the site from there.
+
+Link to live site:
 
 ## Credits:
 

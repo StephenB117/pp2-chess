@@ -10,8 +10,7 @@ function generatePuzzle() {
     let imageDiv = document.getElementById("chess-image");
 
     imageDiv.innerHTML = `<img src="assets/images/${puzzles[randomNum]}" alt="Chess puzzle">`;
-    document.getElementById("from").value = "";
-    document.getElementById("to").value = "";
+    document.getElementById("answer").value = "";
     checkColorToPlay();
     
 }
@@ -20,12 +19,11 @@ function generatePuzzle() {
  * Checks answer against the image shown.
  */
 function checkAnswer() {
-    let from = document.getElementById("from").value.toUpperCase();
-    let to = document.getElementById("to").value.toUpperCase();
+    let answer = document.getElementById("answer").value.toUpperCase();
     let currentPuzzle = document.getElementById("chess-image").innerHTML;
 
     if (currentPuzzle === '<img src="assets/images/B2P1.JPG" alt="Chess puzzle">') {
-        if (from === "B5" && to === "B3") {
+        if (answer === "B5B3") {
             incrementScore();
             generatePuzzle();
         }
@@ -35,7 +33,7 @@ function checkAnswer() {
         }
     } 
     else if (currentPuzzle === '<img src="assets/images/B2P2.JPG" alt="Chess puzzle">') {
-        if (from === "B3" && to === "C3") {
+        if (answer === "B3C3") {
             incrementScore();
             generatePuzzle();
         }
@@ -45,7 +43,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/B2P3.JPG" alt="Chess puzzle">') {
-        if (from === "F4" && to === "F5") {
+        if (answer === "F4F5") {
             incrementScore();
             generatePuzzle();
         } 
@@ -55,7 +53,7 @@ function checkAnswer() {
         }   
     }
     else if (currentPuzzle === '<img src="assets/images/B2P4.JPG" alt="Chess puzzle">') {
-        if (from === "F6" && to === "E5") {
+        if (answer === "F6E5") {
             incrementScore();
             generatePuzzle();
         }
@@ -65,7 +63,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/B2P5.JPG" alt="Chess puzzle">') {
-        if (from === "C8" && to === "C4") {
+        if (answer === "C8C4") {
             incrementScore();
             generatePuzzle();
         }
@@ -75,7 +73,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/B2P6.JPG" alt="Chess puzzle">') {
-        if (from === "C4" && to === "G8") {
+        if (answer === "C4G8") {
             incrementScore();
             generatePuzzle();
         }
@@ -85,7 +83,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P1.JPG" alt="Chess puzzle">') {
-        if (from === "F3" && to === "F8") {
+        if (answer === "F3F8") {
             incrementScore();
             generatePuzzle();
         }
@@ -95,7 +93,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P2.JPG" alt="Chess puzzle">') {
-        if (from === "D5" && to === "D6") {
+        if (answer === "D5D6") {
             incrementScore();
             generatePuzzle();
         }
@@ -105,7 +103,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P3.JPG" alt="Chess puzzle">') {
-        if (from === "E5" && to === "D6") {
+        if (from === "E5D6") {
             incrementScore();
             generatePuzzle();
         }
@@ -115,7 +113,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P4.JPG" alt="Chess puzzle">') {
-        if (from === "F4" && to === "G5") {
+        if (answer === "F4G5") {
             incrementScore();
             generatePuzzle();
         }
@@ -125,7 +123,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P5.JPG" alt="Chess puzzle">') {
-        if (from === "E4" && to === "E5") {
+        if (answer === "E4E5") {
             incrementScore();
             generatePuzzle();
         }
@@ -135,7 +133,7 @@ function checkAnswer() {
         }
     }
     else if (currentPuzzle === '<img src="assets/images/W2P6.JPG" alt="Chess puzzle">') {
-        if (from === "H8" && to === "F6") {
+        if (answer === "H8F6") {
             incrementScore();
             generatePuzzle();
         }

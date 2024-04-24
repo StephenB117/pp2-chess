@@ -19,131 +19,41 @@ function generatePuzzle() {
  * Checks answer against the image shown.
  */
 function checkAnswer() {
-    let answer = document.getElementById("answer").value.toUpperCase();
-    let currentPuzzle = document.getElementById("chess-image").innerHTML;
+    let userAnswer = document.getElementById("answer").value.toUpperCase();
+    let currentPuzzle = document.getElementById("chess-image").innerHTML.substring(24,28);
+    let getSolution = getAnswer(currentPuzzle);
 
-    if (currentPuzzle === '<img src="assets/images/B2P1.JPG" alt="Chess puzzle">') {
-        if (answer === "B5B3") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    } 
-    else if (currentPuzzle === '<img src="assets/images/B2P2.JPG" alt="Chess puzzle">') {
-        if (answer === "B3C3") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/B2P3.JPG" alt="Chess puzzle">') {
-        if (answer === "F4F5") {
-            incrementScore();
-            generatePuzzle();
-        } 
-        else {
-            resetGame();
-            generatePuzzle();
-        }   
-    }
-    else if (currentPuzzle === '<img src="assets/images/B2P4.JPG" alt="Chess puzzle">') {
-        if (answer === "F6E5") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/B2P5.JPG" alt="Chess puzzle">') {
-        if (answer === "C8C4") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/B2P6.JPG" alt="Chess puzzle">') {
-        if (answer === "C4G8") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/W2P1.JPG" alt="Chess puzzle">') {
-        if (answer === "F3F8") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/W2P2.JPG" alt="Chess puzzle">') {
-        if (answer === "D5D6") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/W2P3.JPG" alt="Chess puzzle">') {
-        if (from === "E5D6") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/W2P4.JPG" alt="Chess puzzle">') {
-        if (answer === "F4G5") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/W2P5.JPG" alt="Chess puzzle">') {
-        if (answer === "E4E5") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
-    }
-    else if (currentPuzzle === '<img src="assets/images/W2P6.JPG" alt="Chess puzzle">') {
-        if (answer === "H8F6") {
-            incrementScore();
-            generatePuzzle();
-        }
-        else {
-            resetGame();
-            generatePuzzle();
-        }
+    if (userAnswer === getSolution) {
+        incrementScore();
+        generatePuzzle();
     }
     else {
-        alert("Something went wrong");
+        resetGame();
+        generatePuzzle();
+    }
+}
+
+function getAnswer(currentPuzzle) {
+    const puzzles = {
+        B2P1: "B5B3", 
+        B2P2: "B3C3",
+        B2P3: "F5F4",
+        B2P4: "F6E5",
+        B2P5: "C8C4",
+        B2P6: "C4G8",
+        W2P1: "F3F8",
+        W2P2: "D5D6",
+        W2P3: "E5D6",
+        W2P4: "F4G5",
+        W2P5: "E4E5",
+        W2P6: "H8F6"
+    };
+    
+    if (puzzles[currentPuzzle]) {
+        return puzzles[currentPuzzle]; 
+    }
+    else {
+        return "puzzle not found"; 
     }
 }
 

@@ -67,7 +67,7 @@ I then set the branch to main and saved.
 
 I then went to actions and clicked on pages build and deployment and got the link to the site from there.
 
-Link to live site:
+Link to live site: https://stephenb117.github.io/pp2-chess-puzzle-run/
 
 ## Credits:
 
